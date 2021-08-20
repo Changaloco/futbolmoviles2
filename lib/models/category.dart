@@ -5,6 +5,7 @@ class Category {
   String icon;
   Color color;
   String imgName;
+  String leaguetag;
   List<Category>? subCategories;
 
   Category(
@@ -13,6 +14,7 @@ class Category {
       required this.icon,
       required this.color, 
       required this.imgName,
+      required this.leaguetag,
       required this.subCategories
     }
   );

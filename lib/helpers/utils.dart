@@ -7,33 +7,37 @@ class Utils {
     return[
       Category(
         color: AppColors.Equipo,
-        name: "Equipos",
-        imgName: "Escudo_Deportivo_Cruz_Azul",
+        name: "La Liga",
+        imgName: "laliga",
         icon: IconFontHelper.LOGO,
+        leaguetag:"PD",
         subCategories: []
 
       ),
       Category(
         color: AppColors.FRUITS,
-        name: "Jugadores",
-        imgName: "tenor",
+        name: "Bundesliga",
+        imgName: "bundesliga-logo",
         icon: IconFontHelper.LOGO,
+        leaguetag:"BL1",
         subCategories: []
 
       ),
       Category(
         color: AppColors.SEEDS,
-        name: "Ligas",
-        imgName: "MX_logo",
+        name: "Premier League",
+        imgName: "premierleague",
         icon: IconFontHelper.LOGO,
+        leaguetag:"PL",
         subCategories: []
 
       ),
       Category(
         color: AppColors.SPICES,
-        name: "Selecciones",
-        imgName: "Escudo_Deportivo_Cruz_Azul",
+        name: "Serie A",
+        imgName: "seriea",
         icon: IconFontHelper.LOGO,
+        leaguetag:"SA",
         subCategories: []
 
       )

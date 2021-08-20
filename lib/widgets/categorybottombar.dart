@@ -5,6 +5,8 @@ import '../screens/categorias.dart';
 import '../screens/matches/matchpage.dart';
 import '../screens/standings/standingspage.dart';
 import '../screens/standings/tablaliga.dart';
+import '../screens/matches/partidosList.dart';
+import '../screens/teams/teamscreen.dart';
 class CategoryBottomBar extends StatelessWidget {
   
   @override
@@ -63,7 +65,7 @@ class CategoryBottomBar extends StatelessWidget {
                   onPressed: () {
                       Navigator.push(
                       context, 
-                    MaterialPageRoute(builder:(context)=> MatchPage())
+                    MaterialPageRoute(builder:(context)=> PartidosList(code: '87'))
                     );
                   },
                 ),
@@ -79,7 +81,7 @@ class CategoryBottomBar extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context, 
-                    MaterialPageRoute(builder:(context)=> TableScreen(code: 'PD'))
+                    MaterialPageRoute(builder:(context)=> TeamScreen(code: 87))
                     );
                   },
                 ),

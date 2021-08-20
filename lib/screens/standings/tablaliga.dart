@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
-
+import '../teams/teamscreen.dart';
 class TableScreen extends StatefulWidget {
   final String code;
 
@@ -12,7 +12,7 @@ class TableScreen extends StatefulWidget {
 }
 
 class _TableScreenState extends State<TableScreen> {
-  late List _table;
+   late List _table;
 
   getTable() async {
     http.Response response = await http.get(
@@ -32,7 +32,14 @@ class _TableScreenState extends State<TableScreen> {
       teams.add(
         Padding(
           padding: const EdgeInsets.all(10),
-          child: Row(
+          child: InkWell(
+            onTap:(){
+              Navigator.push(
+                      context, 
+                    MaterialPageRoute(builder:(context)=> TeamScreen(code: team['team']['id']))
+              );
+            },
+            child:Row(
             children: [
               Expanded(
                 child: Row(
@@ -73,6 +80,7 @@ class _TableScreenState extends State<TableScreen> {
               ),
             ],
           ),
+          )
         ),
       );
     }
